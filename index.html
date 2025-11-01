@@ -9,41 +9,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta content="https://metacow.github.io/cow.jpeg" property="og:image">
       <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 body { 
-margin: auto;
+margin:auto;
 text-align: center; 
-font-size: 36px;
-background-image: url(baqround.jpg);
+align-content: center;
+height: 100vh;
+width: 100%;
+font-size:36px;
+color:white;
+background:url("baqround.jpg") center fixed;
+        background-size:cover;
+        text-shadow: black 3px 3px 8px;
+font-family: Caveat;
 }
-#cow {
-height:200px
+
+.cow {
+height:200px;
 } 
-#cow:hover {
-filter: brightness(90%)
+.cow:hover {
+filter: brightness(90%);
 cursor: pointer;
 } 
-#cow:active {
-filter: brightness(75%)
+.cow:active {
+filter: brightness(75%);
 }
+
 img {
 height:24px;
 }
-        img:hover {
+img:hover {
 filter: brightness(90%)
 } 
 img:active {
 filter: brightness(75%)
 }
+
+.visitors:hover {cursor:pointer;}
+
       </style>
     
 <audio id="moo" src="moo.ogg"></audio>
   </head>
-  <body>
-    <h1>Metacow!</h1>
+<div class="theentirepage">  
+  <body>  
+  <h1>Metacow!</h1>
    
     <h2>Experimental Cow Mooing Site, First Of It's Kind!</h2>
    
-    <a onclick="metamoo();" href="#"><img id="cow" src="cow.jpeg" alt="Moo!"></a>
+    <div class="cowcow"> <a onclick="metamoo();"><img src="cow.jpeg" alt="Moo!" class="cow"></a> </div>
    
     <br> 
    
@@ -54,11 +68,12 @@ filter: brightness(75%)
     <br>
 
     
-   <a onclick="alert('Thank you!')"><img alt="" border="0" src="https://counter.websiteout.com/compte.php?S=https%3A%2F%2Fmetacow.github.io%2F&amp;C=26&amp;D=0&amp;N=0&amp;M=1"></a>
+   <a onclick="alert('Thank you!')"><img class="visitors" alt="" border="0" src="https://counter.websiteout.com/compte.php?S=https%3A%2F%2Fmetacow.github.io%2F&amp;C=26&amp;D=0&amp;N=0&amp;M=1"></a>
     <div class="cr"> 
     
       <p> Copyright © 2025 MetaCow Co.</p>
     
+    </div>
     </div>
     <script>
       var metacow = document.getElementById("moo");   
@@ -68,4 +83,5 @@ filter: brightness(75%)
       }
     </script>
     
-</html>
+
+</body></html>
