@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta content="https://metacow.github.io/cow.jpeg" property="og:image">
       <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 body { 
 margin:auto;
@@ -18,21 +19,24 @@ height: 100vh;
 width: 100%;
 font-size:36px;
 color:white;
-background:url("shortname.jpg") center fixed;
+background:url("shortername.jpg") center fixed;
         background-size:cover;
         text-shadow: black 3px 3px 8px;
 font-family: Caveat;
 }
 
 .cow {
-height:200px;
+height:400px;
+        filter:drop-shadow(black 0px 0px 10px);
+        transition: all 0.1s
 } 
 .cow:hover {
-filter: brightness(90%);
 cursor: pointer;
+         filter:drop-shadow(black 0px 0px 10px);
 } 
 .cow:active {
-filter: brightness(75%);
+ filter:drop-shadow(white 0px 0px 10px) brightness(200%);
+ scale: 96%
 }
 
 img {
