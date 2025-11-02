@@ -117,7 +117,7 @@ cursor:pointer;
     </div>
 <div class="theentirepage">         
 
-  <audio id="moo" src="moomodern.mp3"></audio>
+  <audio id="moo" src=""></audio>
   <audio id="amb" src="amb.mp3"></audio>
   <audio id="METAMOOO" src="METAMOOO.mp3"></audio>
   
@@ -151,13 +151,15 @@ cursor:pointer;
       console.log("%cI Give My Thank You's To %cAydoPlaydoh%c And %cHost%c And %cRagmayor%c For Helping MetaCow","color: white;","color: yellow; font-weight: bold;","color: white;","color: pink; font-weight: bold;","color: white;","color: red; font-weight: bold;","color: white;");
       console.log("%cI Give My Thank You's To %cAydoPlaydoh%c And %cHost%c And %cRagmayor%c For Helping MetaCow","color: white;","color: yellow; font-weight: bold;","color: white;","color: pink; font-weight: bold;","color: white;","color: red; font-weight: bold;","color: white;");
       console.log("%cI Give My Thank You's To %cAydoPlaydoh%c And %cHost%c And %cRagmayor%c For Helping MetaCow","color: white;","color: yellow; font-weight: bold;","color: white;","color: pink; font-weight: bold;","color: white;","color: red; font-weight: bold;","color: white;");
+      const cowmoo = ["moooo.mp3","mooooo.mp3","moomodern.mp3"];
+      
+      
       var amb = document.getElementById("amb"); 
       var moo = document.getElementById("moo"); 
       var METAMOOO = document.getElementById("METAMOOO"); 
       amb.load();
       amb.volume = 0.20;
-      moo.load(); 
-      moo.volume = 0.20;
+
       METAMOOO.volume = 0.20;
       METAMOOO.load();
       cowlogo.addEventListener("click", () => {
@@ -173,7 +175,10 @@ cursor:pointer;
     
       var metacow = document.getElementById("moo");   
       function metamoo(){    
+        moo.src = cowmoo[Math.floor(Math.random() * cowmoo.length)]
+        moo.volume = 0.20;
         moo.load();
+        
         moo.play();
 
       }
