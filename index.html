@@ -71,6 +71,7 @@ font-family: Caveat;
     visibility: hidden;
     opacity: 0;
     transition: all 3s;
+    pointer-events: none;
 }
 .cow {
 height:400px;
@@ -141,7 +142,9 @@ cursor:pointer;
       overlay.classList.add("closing");
         amb.loop = true;
         amb.play();
-        moo.play
+        amb.volume = 0.50;
+        moo.play();
+        moo.volume = 0.50;
     });
     overlay.addEventListener("transitionend", (e) => {
       if(e.target === this) this.remove();
