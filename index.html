@@ -138,15 +138,18 @@ cursor:pointer;
     </div>
     </div>
     <script>
-       amb.load();  
+      var amb = document.getElementById("amb"); 
+      var moo = document.getElementById("moo"); 
+      var METAMOOO = document.getElementById("METAMOOO"); 
+      amb.load();
+      amb.volume = 0.40;
       moo.load(); 
+      METAMOOO.volume = 0.40;
       METAMOOO.load();
       cowlogo.addEventListener("click", () => {
       overlay.classList.add("closing");
         amb.loop = true;
-        amb.volume = 0.50;
         amb.play();
-       METAMOOO.volume = 0.50;
         METAMOOO.play();
       
     });
