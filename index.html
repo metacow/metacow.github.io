@@ -24,7 +24,54 @@ background:url("shortername.webp") center fixed;
         text-shadow: black 3px 3px 8px;
 font-family: Caveat;
 }
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0);
+    z-index: 6;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
 
+#cowlogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  transition: all 0.1s;
+  cursor: pointer;
+  filter: drop-shadow(white 0px 0px 5px);
+  transition-behavior: allow-discrete;
+  transition:all 0.1s;
+}
+
+#cowlogo:hover { 
+  filter: drop-shadow(white 0px 0px 20px);
+          drop-shadow(white 0px 0px 5px );
+    transition:all 0.1s;
+}
+
+#overlay.closing #cowlogo { 
+  visibility: hidden;
+  opacity: 0;
+  scale:0%;
+  transform:rotate(0.50turn);
+  filter: drop-shadow(white 0px 0px 50px);
+  transition: all 3s;
+}
+
+#overlay.closing {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 3s;
+}
 .cow {
 height:400px;
         filter:drop-shadow(black 0px 0px 10px);
@@ -39,22 +86,30 @@ cursor: pointer;
  scale: 96%
 }
 
-img {
+
+.visitors {
 height:24px;
 }
-img:hover {
+
+.visitors:hover {
 filter: brightness(90%)
 } 
-img:active {
+
+.visitors:active {
 filter: brightness(75%)
 }
 
-.visitors:hover {cursor:pointer;}
-
-      </style>
+.visitors:hover {
+cursor:pointer;
+}
+</style>
     
 <audio id="moo" src="moomodern.mp3"></audio>
   </head>
+
+  <div tabindex="0" id="overlay" >
+    <div tabindex="0" id="cowlogo"><img src="https://i.imgur.com/hMmnQ4a.png"></div>
+  </div>
 <div class="theentirepage">  
   <body>  
   <h1>Metacow!</h1>
@@ -80,6 +135,14 @@ filter: brightness(75%)
     </div>
     </div>
     <script>
+          cowlogo.addEventListener("click", () => {
+      overlay.classList.add("closing");
+    amb.play();
+    });
+    overlay.addEventListener("transitionend", (e) => {
+      if(e.target === this) this.remove();
+    });
+    
       var metacow = document.getElementById("moo");   
       function metamoo(){
         moo.load();    
