@@ -107,7 +107,7 @@ cursor:pointer;
     
 <audio id="moo" src="moomodern.mp3"></audio>
 <audio id="amb" src="amb.mp3"></audio>
-<audio id="MODERNMOO" src="MODERNMOO.mp3"></audio>
+<audio id="METAMOOO" src="METAMOOO.mp3"></audio>
   </head>
 
   <div tabindex="0" id="overlay" >
@@ -140,14 +140,14 @@ cursor:pointer;
     <script>
        amb.load();  
       moo.load(); 
-      MODERNMOO.load();
+      METAMOOO.load();
       cowlogo.addEventListener("click", () => {
       overlay.classList.add("closing");
         amb.loop = true;
         amb.volume = 0.50;
         amb.play();
-       MODERNMOO.volume = 0.50;
-        MODERNMOO.play();
+       METAMOOO.volume = 0.50;
+        METAMOOO.play();
       
     });
     overlay.addEventListener("transitionend", (e) => {
