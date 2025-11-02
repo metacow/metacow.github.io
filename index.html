@@ -167,8 +167,9 @@ cursor:pointer;
     
       var metacow = document.getElementById("moo");   
       function metamoo(){    
-       moo.cloneNode().play()
-       moo.cloneNode().volume = 0.20;
+        moo.load();
+        moo.play();
+
       }
     </script>
     
