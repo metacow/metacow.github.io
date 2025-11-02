@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html> 
+ <head>
+   <!-- Gay Little Cow "Finally Finds Its Moo" -->
+ </head> 
+<style>
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0);
+    z-index: 6;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+#cowlogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  transition: all 0.1s;
+  cursor: pointer;
+  filter: drop-shadow(white 0px 0px 5px);
+  transition-behavior: allow-discrete;
+  transition:all 0.1s;
+}
+
+#cowlogo:hover { 
+  filter: drop-shadow(white 0px 0px 20px);
+          drop-shadow(white 0px 0px 5px);
+    transition:all 0.1s;
+}
+
+#overlay.closing #cowlogo { 
+  visibility: hidden;
+  opacity: 0;
+  scale:0%;
+  transform:rotate(0.50turn);
+  filter: drop-shadow(white 0px 0px 50px);
+  transition: all 3s;
+}
+
+#overlay.closing {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 3s;
+    pointer-events: none;
+}
+video {
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+</style>
+
+<body style="background-color:black;"> 
+ <audio id="METAMOOO" src="METAMOOO.mp3"></audio>
+<div tabindex="0" id="overlay" >
+    
+      <div tabindex="0" id="cowlogo"><img src="metalogo.png"></div>
+    
+    </div>
+<video id="moo">
+  <source src="https://metacow.github.io/gaylittlecow/slay.mp4">
+  Your browser does not support HTML video.
+</video>
+
+<script>
+var METAMOOO = document.getElementById("METAMOOO"); 
+METAMOOO.volume = 0.20;
+      METAMOOO.load();
+var moo = document.getElementById("moo"); 
+function metamoo(){    
+        moo.load();
+        moo.play();
+
+      }
+       cowlogo.addEventListener("click", () => {
+      overlay.classList.add("closing");
+        moo.play();
+        METAMOOO.play();
+      
+    });
+</script>
+</body> 
+</html>
+
