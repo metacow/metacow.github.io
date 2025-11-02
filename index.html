@@ -105,6 +105,7 @@ cursor:pointer;
 </style>
     
 <audio id="moo" src="moomodern.mp3"></audio>
+<audio id="amb" src="amb.mp3"></audio>
   </head>
 
   <div tabindex="0" id="overlay" >
@@ -135,9 +136,12 @@ cursor:pointer;
     </div>
     </div>
     <script>
-          cowlogo.addEventListener("click", () => {
+       amb.load();     
+      cowlogo.addEventListener("click", () => {
       overlay.classList.add("closing");
-    amb.play();
+        amb.loop = true;
+        amb.play();
+        moo.play
     });
     overlay.addEventListener("transitionend", (e) => {
       if(e.target === this) this.remove();
