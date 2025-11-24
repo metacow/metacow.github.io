@@ -95,7 +95,7 @@ function metamoo(){
       
     });
 /* start funny Uragan code -- refer to 52.28.33.214:5002 */
- function onDeath(n) {
+  function onDeath(n) {
         var e = !1;
         function o() {
           e && n((e = !1));
@@ -134,8 +134,13 @@ function metamoo(){
           (document.cookie =
             "dead=1; expires=Sun, 1 Jan 2040 00:00:00 UTC; path=/"),
           setTimeout(function () {
-            alert("DON'T LEAVE ME.")
-          }, 10));
+           alert("DON'T LEAVE ME.") 
+           location.replace(
+              document.referrer && document.referrer != location.href
+                ? document.referrer
+                : "https://metacow.github.io/evil/"
+            );
+          }, 0));
       }),
         document.addEventListener("contextmenu", function (n) {
           n.preventDefault();
