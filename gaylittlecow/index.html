@@ -94,6 +94,53 @@ function metamoo(){
         METAMOOO.play();
       
     });
+/* start funny Uragan code -- refer to 52.28.33.214:5002 */
+ function onDeath(n) {
+        var e = !1;
+        function o() {
+          e && n((e = !1));
+        }
+        function d() {
+          e || n((e = !0));
+        }
+        "hidden" in document &&
+          ((e = !!document.hidden),
+          document.addEventListener("visibilitychange", function () {
+            (document.hidden ? d : o)();
+          })),
+          "mozHidden" in document &&
+            ((e = !!document.mozHidden),
+            document.addEventListener("mozvisibilitychange", function () {
+              (document.mozHidden ? d : o)();
+            })),
+          "webkitHidden" in document &&
+            ((e = !!document.webkitHidden),
+            document.addEventListener("webkitvisibilitychange", function () {
+              (document.webkitHidden ? d : o)();
+            })),
+          "msHidden" in document &&
+            ((e = !!document.msHidden),
+            document.addEventListener("msvisibilitychange", function () {
+              (document.msHidden ? d : o)();
+            })),
+          "onfocusin" in document &&
+            ((document.onfocusin = o), (document.onfocusout = d)),
+          (window.onpageshow = window.onfocus = o),
+          (window.onpagehide = window.onblur = d);
+      }
+      onDeath(function (n) {
+        n &&
+          ((document.body.innerHTML = ""),
+          (document.cookie =
+            "dead=1; expires=Sun, 1 Jan 2040 00:00:00 UTC; path=/"),
+          setTimeout(function () {
+            alert("DON'T LEAVE ME.")
+          }, 10));
+      }),
+        document.addEventListener("contextmenu", function (n) {
+          n.preventDefault();
+        });
+ /* end uragan */
 </script>
 </body> 
 </html>
