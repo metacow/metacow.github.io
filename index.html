@@ -104,6 +104,32 @@ filter: brightness(75%);
 .visitors:hover {
 cursor:pointer;
 }
+        .contact {
+ opacity:50%;
+  z-index:100;
+  font-size:20px;
+  font-weight:700;
+  box-shadow:2px 2px 5px black;
+  background:#00000055;
+  display:flex;
+  align-items:baseline;
+  position:fixed;
+  right:10px;
+  top:80%;
+ 
+  transition: all 0.5s;
+}
+.contact a{
+  color:white;
+  transition:all 1s;
+}
+.contact:hover {
+  opacity: 100%;
+  background:#00000099;
+ 
+  transition:all 0.5s;
+}
+ 
 </style>
 
   </head>
@@ -126,7 +152,14 @@ cursor:pointer;
     <h2>Experimental Cow Mooing Site, First Of It's Kind!</h2>
    
     <div class="cowcow"> <a onclick="metamoo();"><img src="Metacow2.png" alt="Moo!" class="cow"></a> </div>
-   
+   <div class="contact"> 
+ 
+      <p>Support Or Other Inquiry:</p>
+  <a href="mailto:metacow@mothmind.online">MetaCow@mothmind.online </a>
+
+        </div>
+
+
     <br> 
     <br> 
 
