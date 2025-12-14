@@ -104,32 +104,33 @@ filter: brightness(75%);
 .visitors:hover {
 cursor:pointer;
 }
-        .contact {
+.contact {
  opacity:50%;
   z-index:5;
   font-size:20px;
   font-weight:700;
-  box-shadow:2px 2px 5px black;
-  background:#00000055;
   display:flex;
   align-items:baseline;
   position:fixed;
-  right:10px;
-  top:80%;
- 
-  transition: all 0.5s;
+  right:10pt;
+  bottom:10pt;
+  transition: all 0.2s;
 }
 .contact a{
   color:white;
-  transition:all 1s;
+  transition:all 0.2s;
+}
+.contact a:hover {
+  opacity: 100%;
+  text-shadow:white 0px 0px 5px;
+  transition: all 0.2s;
+  font-size:21px;
 }
 .contact:hover {
   opacity: 100%;
-  background:#00000099;
- 
-  transition:all 0.5s;
+  
+  transition:all 0.2s;
 }
- 
 </style>
 
   </head>
@@ -154,7 +155,7 @@ cursor:pointer;
     <div class="cowcow"> <a onclick="metamoo();"><img src="Metacow2.png" alt="Moo!" class="cow"></a> </div>
    <div class="contact"> 
  
-      <p>Support Or Other Inquiry:</p>
+      <p>Support Or Other Inquiry: </p>
   <a href="mailto:metacow@mothmind.online">MetaCow@mothmind.online </a>
 
         </div>
